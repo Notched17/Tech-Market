@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[47257,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"ClientPageRoot"]
+3:I[78928,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js","/_next/static/chunks/0wuuzj5s-glvp.js"],"default"]
+6:I[97367,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:I[97367,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"MetadataBoundary"]
+d:I[27201,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"IconMark"]
+f:I[39756,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"default"]
+10:I[37457,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"default"]
+13:I[23158,["/_next/static/chunks/0sdlnqg3fdief.js","/_next/static/chunks/26f9pks1305hp.js"],"default"]
+:HL["/_next/static/chunks/2rzoo7fqa_c92.css","style"]
+a:X
+12:X
+12:C
+0:{"buildId":"7J3R6Du_C7ISIXd1fNKSK","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/0wuuzj5s-glvp.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Docket — spec the job, get quotes"}],["$","meta","1",{"name":"description","content":"A marketplace for tech work only. Companies spec a job — web builds, IT support, networking, databases, custom apps — and providers quote for it."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$Ld","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@e","staleTime":"$a","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lf",null,{"parallelRouterKey":"children","template":["$","$L10",null,{}]}]]}],"isPartial":"$@11","staleTime":"$a","varyParams":"$12"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2rzoo7fqa_c92.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0sdlnqg3fdief.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/26f9pks1305hp.js","async":true}]],["$","html",null,{"lang":"en","className":"chivo_15b38a44-module__dnLL5G__variable chivo_mono_8af247c0-module__ClWNYG__variable h-full","children":["$","body",null,{"className":"min-h-full flex flex-col text-ink","children":[["$","a",null,{"href":"#main","className":"skip-link","children":"Skip to content"}],["$","$L13",null,{}],["$","main",null,{"id":"main","className":"flex-1 w-full","children":["$","$Lf",null,{"parallelRouterKey":"children","template":["$","$L10",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","footer",null,{"className":"border-t border-rule-strong bg-sheet","children":["$","div",null,{"className":"max-w-6xl mx-auto px-5 py-6 flex flex-wrap items-center justify-between gap-3 note","children":[["$","span",null,{"className":"font-semibold text-ink","children":"Docket"}],["$","span",null,{"children":"Tech work only: web, IT support, networking, databases and custom apps."}]]}]}]]}]}]]}],"isPartial":"$@14","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+4:{}
+5:"$0:data:0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
+a:300
+16:true
+a:C
+15:0
+e:"$undefined"
+11:"$undefined"
+14:"$undefined"
+9:"$undefined"
