@@ -98,13 +98,6 @@ function LoginForm() {
           </button>
         </form>
       </Ticket>
-
-      <p className="text-ink-2 mt-6 text-center">
-        New to Docket?{" "}
-        <Link href="/signup" className="link">
-          Create an account
-        </Link>
-      </p>
     </div>
   );
 }

@@ -118,7 +118,8 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
   const myBid = bids.find((b) => b.provider_id === profile?.id);
 
   const companyName = job.company?.company_name || job.company?.display_name || "A company";
-  const lowest = bids.length ? Math.min(...bids.map((b) => b.amount)) : null;
+  const live = bids.filter((b) => b.status !== "rejected");
+  const lowest = live.length ? Math.min(...live.map((b) => b.amount)) : null;
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-8 sm:py-12">
@@ -205,7 +206,7 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
                             {bid.provider?.display_name ?? "Provider"}
                           </span>
                           {bid.status !== "pending" && <Stamp status={bid.status} />}
-                          {bid.amount === lowest && bids.length > 1 && (
+                          {bid.status !== "rejected" && bid.amount === lowest && live.length > 1 && (
                             <span className="label text-ink">Lowest quote</span>
                           )}
                         </div>

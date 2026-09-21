@@ -185,13 +185,6 @@ export default function SignupPage() {
           </button>
         </form>
       </Ticket>
-
-      <p className="text-ink-2 mt-6 text-center">
-        Already have an account?{" "}
-        <Link href="/login" className="link">
-          Log in
-        </Link>
-      </p>
     </div>
   );
 }

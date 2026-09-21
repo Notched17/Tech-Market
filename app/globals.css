@@ -42,6 +42,7 @@
 
 /* ---------- Base ---------- */
 
+@layer base {
 html {
   -webkit-text-size-adjust: 100%;
   scrollbar-color: var(--rule-strong) var(--desk);
@@ -94,6 +95,8 @@ a {
   border-radius: 2px;
 }
 
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -109,6 +112,7 @@ a {
   top: 0.75rem;
 }
 
+@layer components {
 /* ---------- Type roles ---------- */
 
 /* Printed form labels: condensed, like the pre-printed text on a work order. */
@@ -359,6 +363,8 @@ select.field {
 }
 .fan {
   animation: fan-out 700ms var(--ease-out) both;
+}
+
 }
 
 @media (prefers-reduced-motion: reduce) {
