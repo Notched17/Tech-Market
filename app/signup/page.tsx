@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase/client";
 import type { Role } from "@/lib/types";
+import { Ticket } from "@/components/Ticket";
+import FormField, { FormError } from "@/components/FormField";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -54,94 +56,139 @@ export default function SignupPage() {
     }
   }
 
+  const roles: { value: Role; title: string; body: string }[] = [
+    {
+      value: "company",
+      title: "I need tech work done",
+      body: "Post jobs, compare quotes against your budget, accept one.",
+    },
+    {
+      value: "provider",
+      title: "I do tech work",
+      body: "Freelancer or small team. Browse open jobs and send quotes.",
+    },
+  ];
+
   return (
-    <div className="max-w-md mx-auto px-5 py-16">
-      <h1 className="font-display text-2xl font-semibold mb-1">Create an account</h1>
-      <p className="text-ink-soft text-sm mb-8">
-        Join as a company posting work, or a provider bidding on it.
-      </p>
+    <div className="max-w-xl mx-auto px-5 py-12 sm:py-20">
+      <Ticket
+        as="section"
+        stub={
+          <>
+            <span className="label">New Docket account</span>
+            <Link href="/login" className="text-sm link">
+              Log in instead
+            </Link>
+          </>
+        }
+      >
+        <h1 className="text-3xl sm:text-4xl">Create an account</h1>
+        <p className="text-ink-2 mt-2">
+          Choose the side you&apos;re on. Companies post the work, providers quote for it.
+        </p>
 
-      <div className="flex gap-2 mb-6">
-        <button
-          type="button"
-          onClick={() => setRole("company")}
-          className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
-            role === "company"
-              ? "border-teal bg-teal/10 text-teal-dark"
-              : "border-border text-ink-soft"
-          }`}
-        >
-          I need work done
-        </button>
-        <button
-          type="button"
-          onClick={() => setRole("provider")}
-          className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
-            role === "provider"
-              ? "border-teal bg-teal/10 text-teal-dark"
-              : "border-border text-ink-soft"
-          }`}
-        >
-          I do tech work
-        </button>
-      </div>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-7">
+          <fieldset>
+            <legend className="label mb-2">Account type</legend>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {roles.map((r) => {
+                const checked = role === r.value;
+                return (
+                  <label
+                    key={r.value}
+                    className={`relative flex flex-col gap-1 cursor-pointer rounded-[2px] border px-4 py-3.5 transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ink ${
+                      checked
+                        ? "border-ink bg-wash shadow-[inset_0_0_0_1px_var(--ink)]"
+                        : "border-rule-strong bg-stock hover:border-ink"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="role"
+                      value={r.value}
+                      checked={checked}
+                      onChange={() => setRole(r.value)}
+                      className="sr-only"
+                    />
+                    <span className="flex items-center gap-2 font-semibold">
+                      <span
+                        aria-hidden="true"
+                        className={`grid place-items-center size-4 rounded-full border-2 border-ink ${
+                          checked ? "bg-ink" : "bg-stock"
+                        }`}
+                      >
+                        {checked && <span className="size-1.5 rounded-full bg-canary" />}
+                      </span>
+                      {r.title}
+                    </span>
+                    <span className="text-sm text-ink-2 pl-6">{r.body}</span>
+                  </label>
+                );
+              })}
+            </div>
+          </fieldset>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <label className="flex flex-col gap-1 text-sm">
-          {role === "company" ? "Your name" : "Display name"}
-          <input
-            className="field"
-            required
-            value={displayName}
-            onChange={(e) => setDisplayName(e.target.value)}
-          />
-        </label>
-
-        {role === "company" && (
-          <label className="flex flex-col gap-1 text-sm">
-            Company name
+          <FormField id="display-name" label={role === "company" ? "Your name" : "Display name"}>
             <input
+              id="display-name"
               className="field"
+              autoComplete="name"
               required
-              value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
+              value={displayName}
+              onChange={(e) => setDisplayName(e.target.value)}
             />
-          </label>
-        )}
+          </FormField>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Email
-          <input
-            className="field"
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+          {role === "company" && (
+            <FormField id="company-name" label="Company name">
+              <input
+                id="company-name"
+                className="field"
+                autoComplete="organization"
+                required
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+              />
+            </FormField>
+          )}
 
-        <label className="flex flex-col gap-1 text-sm">
-          Password
-          <input
-            className="field"
-            type="password"
-            required
-            minLength={6}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
+          <FormField id="email" label="Email">
+            <input
+              id="email"
+              className="field"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormField>
 
-        {error && <p className="text-rust text-sm">{error}</p>}
+          <FormField id="password" label="Password" hint="At least 6 characters.">
+            <input
+              id="password"
+              className="field"
+              type="password"
+              autoComplete="new-password"
+              required
+              minLength={6}
+              aria-describedby="password-hint"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FormField>
 
-        <button type="submit" disabled={submitting} className="btn-primary mt-2">
-          {submitting ? "Creating account…" : "Sign up"}
-        </button>
-      </form>
+          {error && <FormError>{error}</FormError>}
 
-      <p className="text-sm text-ink-soft mt-6">
+          <button type="submit" disabled={submitting} className="btn-primary w-full mt-1">
+            {submitting ? "Creating account…" : "Create account"}
+          </button>
+        </form>
+      </Ticket>
+
+      <p className="text-ink-2 mt-6 text-center">
         Already have an account?{" "}
-        <Link href="/login" className="text-teal-dark font-medium">
+        <Link href="/login" className="link">
           Log in
         </Link>
       </p>

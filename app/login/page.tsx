@@ -4,6 +4,8 @@ import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase/client";
+import { Ticket } from "@/components/Ticket";
+import FormField, { FormError } from "@/components/FormField";
 
 export default function LoginPage() {
   return (
@@ -43,50 +45,64 @@ function LoginForm() {
   }
 
   return (
-    <div className="max-w-md mx-auto px-5 py-16">
-      <h1 className="font-display text-2xl font-semibold mb-1">Log in</h1>
+    <div className="max-w-md mx-auto px-5 py-12 sm:py-20">
+      <Ticket
+        as="section"
+        stub={
+          <>
+            <span className="label">Docket account</span>
+            <Link href="/signup" className="text-sm link">
+              Create an account
+            </Link>
+          </>
+        }
+      >
+        <h1 className="text-3xl sm:text-4xl">Log in</h1>
 
-      {justSignedUp && (
-        <p className="text-sm bg-teal/10 text-teal-dark border border-teal/30 rounded px-3 py-2 mb-6">
-          Account created. If email confirmation is on for this project,
-          check your inbox before logging in.
-        </p>
-      )}
+        {justSignedUp && (
+          <p role="status" className="copy-sheet text-sm px-4 py-3 mt-5">
+            Account created. If this project asks you to confirm your email, open the link in your
+            inbox first, then log in here.
+          </p>
+        )}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-6">
-        <label className="flex flex-col gap-1 text-sm">
-          Email
-          <input
-            className="field"
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-7">
+          <FormField id="email" label="Email">
+            <input
+              id="email"
+              className="field"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormField>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Password
-          <input
-            className="field"
-            type="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
+          <FormField id="password" label="Password">
+            <input
+              id="password"
+              className="field"
+              type="password"
+              autoComplete="current-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FormField>
 
-        {error && <p className="text-rust text-sm">{error}</p>}
+          {error && <FormError>{error}</FormError>}
 
-        <button type="submit" disabled={submitting} className="btn-primary mt-2">
-          {submitting ? "Logging in…" : "Log in"}
-        </button>
-      </form>
+          <button type="submit" disabled={submitting} className="btn-primary w-full mt-1">
+            {submitting ? "Logging in…" : "Log in"}
+          </button>
+        </form>
+      </Ticket>
 
-      <p className="text-sm text-ink-soft mt-6">
-        Need an account?{" "}
-        <Link href="/signup" className="text-teal-dark font-medium">
-          Sign up
+      <p className="text-ink-2 mt-6 text-center">
+        New to Docket?{" "}
+        <Link href="/signup" className="link">
+          Create an account
         </Link>
       </p>
     </div>
