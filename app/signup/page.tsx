@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase/client";
 import type { Role } from "@/lib/types";
+import FormField, { FormError } from "@/components/FormField";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -54,97 +55,127 @@ export default function SignupPage() {
     }
   }
 
+  const roles: { value: Role; title: string; body: string }[] = [
+    {
+      value: "company",
+      title: "I need tech work done",
+      body: "Post jobs, see quotes against your budget, accept one.",
+    },
+    {
+      value: "provider",
+      title: "I do tech work",
+      body: "Freelancer or small team. Browse open jobs and send quotes.",
+    },
+  ];
+
   return (
-    <div className="max-w-md mx-auto px-5 py-16">
-      <h1 className="font-display text-2xl font-semibold mb-1">Create an account</h1>
-      <p className="text-ink-soft text-sm mb-8">
-        Join as a company posting work, or a provider bidding on it.
-      </p>
+    <div className="max-w-xl mx-auto px-5 py-12 sm:py-20">
+      <section className="sheet">
+        <div className="px-6 sm:px-9 pt-8 sm:pt-10 pb-8">
+          <h1 className="text-3xl sm:text-4xl">Create an account</h1>
+          <p className="text-ink-2 mt-2">
+            Choose your side. Companies post the work, providers quote for it.
+          </p>
 
-      <div className="flex gap-2 mb-6">
-        <button
-          type="button"
-          onClick={() => setRole("company")}
-          className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
-            role === "company"
-              ? "border-teal bg-teal/10 text-teal-dark"
-              : "border-border text-ink-soft"
-          }`}
-        >
-          I need work done
-        </button>
-        <button
-          type="button"
-          onClick={() => setRole("provider")}
-          className={`flex-1 rounded border px-3 py-2 text-sm font-medium transition-colors ${
-            role === "provider"
-              ? "border-teal bg-teal/10 text-teal-dark"
-              : "border-border text-ink-soft"
-          }`}
-        >
-          I do tech work
-        </button>
-      </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 mt-7">
+            <fieldset>
+              <legend className="font-semibold mb-2">Account type</legend>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {roles.map((r) => {
+                  const checked = role === r.value;
+                  return (
+                    <label
+                      key={r.value}
+                      className={`relative flex flex-col gap-1 cursor-pointer border px-4 py-3.5 transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-3 has-[:focus-visible]:outline-blue ${
+                        checked ? "border-blue bg-tint shadow-[inset_0_0_0_1px_var(--blue)]" : "border-rule-strong bg-sheet hover:border-blue"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="role"
+                        value={r.value}
+                        checked={checked}
+                        onChange={() => setRole(r.value)}
+                        className="sr-only"
+                      />
+                      <span className="flex items-center gap-2 font-semibold">
+                        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" className="shrink-0 text-blue">
+                          <circle cx="7" cy="7" r="5.75" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                          {checked && <circle cx="7" cy="7" r="3" fill="currentColor" />}
+                        </svg>
+                        {r.title}
+                      </span>
+                      <span className="note pl-[1.375rem]">{r.body}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            </fieldset>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <label className="flex flex-col gap-1 text-sm">
-          {role === "company" ? "Your name" : "Display name"}
-          <input
-            className="field"
-            required
-            value={displayName}
-            onChange={(e) => setDisplayName(e.target.value)}
-          />
-        </label>
+            <FormField id="display-name" label={role === "company" ? "Your name" : "Display name"}>
+              <input
+                id="display-name"
+                className="field"
+                autoComplete="name"
+                required
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+              />
+            </FormField>
 
-        {role === "company" && (
-          <label className="flex flex-col gap-1 text-sm">
-            Company name
-            <input
-              className="field"
-              required
-              value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
-            />
-          </label>
-        )}
+            {role === "company" && (
+              <FormField id="company-name" label="Company name">
+                <input
+                  id="company-name"
+                  className="field"
+                  autoComplete="organization"
+                  required
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                />
+              </FormField>
+            )}
 
-        <label className="flex flex-col gap-1 text-sm">
-          Email
-          <input
-            className="field"
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+            <FormField id="email" label="Email">
+              <input
+                id="email"
+                className="field"
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </FormField>
 
-        <label className="flex flex-col gap-1 text-sm">
-          Password
-          <input
-            className="field"
-            type="password"
-            required
-            minLength={6}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
+            <FormField id="password" label="Password" hint="At least 6 characters.">
+              <input
+                id="password"
+                className="field"
+                type="password"
+                autoComplete="new-password"
+                required
+                minLength={6}
+                aria-describedby="password-hint"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </FormField>
 
-        {error && <p className="text-rust text-sm">{error}</p>}
+            {error && <FormError>{error}</FormError>}
 
-        <button type="submit" disabled={submitting} className="btn-primary mt-2">
-          {submitting ? "Creating account…" : "Sign up"}
-        </button>
-      </form>
-
-      <p className="text-sm text-ink-soft mt-6">
-        Already have an account?{" "}
-        <Link href="/login" className="text-teal-dark font-medium">
-          Log in
-        </Link>
-      </p>
+            <button type="submit" disabled={submitting} className="btn-primary w-full mt-1">
+              {submitting ? "Creating account…" : "Create account"}
+            </button>
+          </form>
+        </div>
+        <p className="border-t border-rule px-6 sm:px-9 py-4 text-ink-2">
+          Already have an account?{" "}
+          <Link href="/login" className="link">
+            Log in
+          </Link>
+        </p>
+      </section>
     </div>
   );
 }
