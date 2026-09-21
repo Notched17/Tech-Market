@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #eef0ec;
+  --paper-raised: #f8f8f5;
+  --ink: #16213e;
+  --ink-soft: #4b5468;
+  --teal: #0e7c7b;
+  --teal-dark: #0a5f5e;
+  --amber: #c97a2b;
+  --forest: #2f6d4f;
+  --rust: #b24d3e;
+  --border: #d8d6cc;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-amber: var(--amber);
+  --color-forest: var(--forest);
+  --color-rust: var(--rust);
+  --color-border: var(--border);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-plex-sans);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--paper-raised);
+  border-radius: 4px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.field:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+  border-color: var(--teal);
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--paper-raised);
+  border-radius: 4px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+.btn-primary:hover {
+  background: var(--teal-dark);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-quiet {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.6rem 1.1rem;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+.btn-quiet:hover {
+  border-color: var(--ink-soft);
+}
