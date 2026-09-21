@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T11:09:11.897Z",
+  "title": "Design System: Docket",
+  "extensions": {
+    "colorMeta": {
+      "desk": {
+        "role": "neutral",
+        "displayName": "Desk",
+        "canonical": "oklch(93.7% 0.008 271.3)",
+        "tonalRamp": [
+          "oklch(15% 0.003 271.3)",
+          "oklch(26% 0.004 271.3)",
+          "oklch(37% 0.006 271.3)",
+          "oklch(48% 0.008 271.3)",
+          "oklch(59% 0.008 271.3)",
+          "oklch(70% 0.006 271.3)",
+          "oklch(82% 0.004 271.3)",
+          "oklch(95% 0.001 271.3)"
+        ]
+      },
+      "stock": {
+        "role": "neutral",
+        "displayName": "Form Stock",
+        "canonical": "oklch(98.8% 0.003 106.4)",
+        "tonalRamp": [
+          "oklch(15% 0.001 106.4)",
+          "oklch(26% 0.001 106.4)",
+          "oklch(37% 0.002 106.4)",
+          "oklch(48% 0.003 106.4)",
+          "oklch(59% 0.003 106.4)",
+          "oklch(70% 0.002 106.4)",
+          "oklch(82% 0.001 106.4)",
+          "oklch(95% 0.000 106.4)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Carbon Ink",
+        "canonical": "oklch(30.1% 0.114 271.7)",
+        "tonalRamp": [
+          "oklch(15% 0.034 271.7)",
+          "oklch(26% 0.059 271.7)",
+          "oklch(37% 0.084 271.7)",
+          "oklch(48% 0.109 271.7)",
+          "oklch(59% 0.112 271.7)",
+          "oklch(70% 0.082 271.7)",
+          "oklch(82% 0.049 271.7)",
+          "oklch(95% 0.014 271.7)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "oklch(45.2% 0.082 276.5)",
+        "tonalRamp": [
+          "oklch(15% 0.025 276.5)",
+          "oklch(26% 0.043 276.5)",
+          "oklch(37% 0.061 276.5)",
+          "oklch(48% 0.079 276.5)",
+          "oklch(59% 0.081 276.5)",
+          "oklch(70% 0.059 276.5)",
+          "oklch(82% 0.035 276.5)",
+          "oklch(95% 0.010 276.5)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Ruling",
+        "canonical": "oklch(86.3% 0.024 275.3)",
+        "tonalRamp": [
+          "oklch(15% 0.007 275.3)",
+          "oklch(26% 0.012 275.3)",
+          "oklch(37% 0.018 275.3)",
+          "oklch(48% 0.023 275.3)",
+          "oklch(59% 0.023 275.3)",
+          "oklch(70% 0.017 275.3)",
+          "oklch(82% 0.010 275.3)",
+          "oklch(95% 0.003 275.3)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Ruling",
+        "canonical": "oklch(60.3% 0.066 276.1)",
+        "tonalRamp": [
+          "oklch(15% 0.020 276.1)",
+          "oklch(26% 0.034 276.1)",
+          "oklch(37% 0.049 276.1)",
+          "oklch(48% 0.064 276.1)",
+          "oklch(59% 0.065 276.1)",
+          "oklch(70% 0.048 276.1)",
+          "oklch(82% 0.029 276.1)",
+          "oklch(95% 0.008 276.1)"
+        ]
+      },
+      "canary": {
+        "role": "secondary",
+        "displayName": "Canary Copy Sheet",
+        "canonical": "oklch(87.5% 0.155 96.3)",
+        "tonalRamp": [
+          "oklch(15% 0.047 96.3)",
+          "oklch(26% 0.081 96.3)",
+          "oklch(37% 0.115 96.3)",
+          "oklch(48% 0.149 96.3)",
+          "oklch(59% 0.153 96.3)",
+          "oklch(70% 0.112 96.3)",
+          "oklch(82% 0.067 96.3)",
+          "oklch(95% 0.019 96.3)"
+        ]
+      },
+      "canary-deep": {
+        "role": "secondary",
+        "displayName": "Canary Deep",
+        "canonical": "oklch(82.1% 0.164 94.9)",
+        "tonalRamp": [
+          "oklch(15% 0.049 94.9)",
+          "oklch(26% 0.085 94.9)",
+          "oklch(37% 0.121 94.9)",
+          "oklch(48% 0.157 94.9)",
+          "oklch(59% 0.161 94.9)",
+          "oklch(70% 0.118 94.9)",
+          "oklch(82% 0.071 94.9)",
+          "oklch(95% 0.020 94.9)"
+        ]
+      },
+      "wash": {
+        "role": "secondary",
+        "displayName": "Carbon Wash",
+        "canonical": "oklch(95.4% 0.064 97.8)",
+        "tonalRamp": [
+          "oklch(15% 0.019 97.8)",
+          "oklch(26% 0.033 97.8)",
+          "oklch(37% 0.047 97.8)",
+          "oklch(48% 0.061 97.8)",
+          "oklch(59% 0.063 97.8)",
+          "oklch(70% 0.046 97.8)",
+          "oklch(82% 0.028 97.8)",
+          "oklch(95% 0.008 97.8)"
+        ]
+      },
+      "stamp-open": {
+        "role": "tertiary",
+        "displayName": "Stamp Green",
+        "canonical": "oklch(46.8% 0.095 158.6)",
+        "tonalRamp": [
+          "oklch(15% 0.028 158.6)",
+          "oklch(26% 0.049 158.6)",
+          "oklch(37% 0.070 158.6)",
+          "oklch(48% 0.091 158.6)",
+          "oklch(59% 0.093 158.6)",
+          "oklch(70% 0.068 158.6)",
+          "oklch(82% 0.041 158.6)",
+          "oklch(95% 0.011 158.6)"
+        ]
+      },
+      "stamp-progress": {
+        "role": "tertiary",
+        "displayName": "Stamp Goldenrod",
+        "canonical": "oklch(48.9% 0.105 70.8)",
+        "tonalRamp": [
+          "oklch(15% 0.032 70.8)",
+          "oklch(26% 0.055 70.8)",
+          "oklch(37% 0.078 70.8)",
+          "oklch(48% 0.101 70.8)",
+          "oklch(59% 0.104 70.8)",
+          "oklch(70% 0.076 70.8)",
+          "oklch(82% 0.046 70.8)",
+          "oklch(95% 0.013 70.8)"
+        ]
+      },
+      "stamp-void": {
+        "role": "tertiary",
+        "displayName": "Stamp Red",
+        "canonical": "oklch(47.7% 0.152 27.5)",
+        "tonalRamp": [
+          "oklch(15% 0.046 27.5)",
+          "oklch(26% 0.079 27.5)",
+          "oklch(37% 0.113 27.5)",
+          "oklch(48% 0.146 27.5)",
+          "oklch(59% 0.150 27.5)",
+          "oklch(70% 0.110 27.5)",
+          "oklch(82% 0.066 27.5)",
+          "oklch(95% 0.018 27.5)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Landing headline and closing canary band only; extra-bold at 68% width."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles and major section heads; 2.25rem rising to 3rem at sm."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Ticket titles and empty-state heads; register job titles at 1.25rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and written values at normal width; long text capped near 68ch."
+      },
+      "label": {
+        "displayName": "Printed Label",
+        "purpose": "Condensed pre-printed field labels, column heads, ticket numbers."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Quote amounts and budgets in tabular figures at 80% width."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ticket-lift",
+        "value": "0 1px 0 var(--rule), 0 10px 24px -18px rgb(28 37 102 / 0.45)",
+        "purpose": "Tickets only: paper resting on the desk."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 1px var(--ink), 0 0 0 4px var(--canary)",
+        "purpose": "Focused field: ink edge plus canary halo."
+      },
+      {
+        "name": "accepted-ring",
+        "value": "inset 0 0 0 2px var(--stamp-open)",
+        "purpose": "The accepted quote sheet."
+      },
+      {
+        "name": "stamp-double-rule",
+        "value": "inset 0 0 0 1px var(--stock), inset 0 0 0 2px currentColor",
+        "purpose": "Inner rule of the stamp border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions (150ms colour, 100ms press)."
+      },
+      {
+        "name": "press",
+        "value": "translateY(1px) 100ms",
+        "purpose": "Buttons settle 1px on :active."
+      },
+      {
+        "name": "fan-out",
+        "value": "700ms ease-out, staggered 110ms, from translate(0,-40px) rotate(0)",
+        "purpose": "Landing carbon copies fan out once on load."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durations 0.01ms",
+        "purpose": "prefers-reduced-motion collapses all animation and transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Canary: the one action that moves a ticket forward.",
+      "html": "<button class=\"ds-btn-primary\">Post a job</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.75rem;padding:0.625rem 1.125rem;border-radius:2px;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;line-height:1.2;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1),transform 100ms cubic-bezier(0.16,1,0.3,1);background:var(--canary,#f4d54a);color:var(--ink,#1c2566);border:1px solid var(--ink,#1c2566);}.ds-btn-primary:hover{background:var(--canary-deep,#e6c21c);}.ds-btn-primary:active{transform:translateY(1px);}.ds-btn-primary:focus-visible{outline:2px solid var(--ink,#1c2566);outline-offset:2px;}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Solid carbon: a firm secondary commit, such as accepting a quote.",
+      "html": "<button class=\"ds-btn-ink\">Accept quote</button>",
+      "css": ".ds-btn-ink{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.75rem;padding:0.625rem 1.125rem;border-radius:2px;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;line-height:1.2;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1),transform 100ms cubic-bezier(0.16,1,0.3,1);background:var(--ink,#1c2566);color:var(--stock,#fbfbf9);border:1px solid var(--ink,#1c2566);}.ds-btn-ink:hover{background:#121a4f;}.ds-btn-ink:active{transform:translateY(1px);}.ds-btn-ink:focus-visible{outline:2px solid var(--ink,#1c2566);outline-offset:2px;}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Transparent with a ruled border; secondary navigation actions.",
+      "html": "<button class=\"ds-btn-quiet\">Find work</button>",
+      "css": ".ds-btn-quiet{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.75rem;padding:0.625rem 1.125rem;border-radius:2px;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;line-height:1.2;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1),transform 100ms cubic-bezier(0.16,1,0.3,1);background:transparent;color:var(--ink,#1c2566);border:1px solid var(--rule-strong,#767ea9);}.ds-btn-quiet:hover{border-color:var(--ink,#1c2566);background:var(--stock,#fbfbf9);}.ds-btn-quiet:active{transform:translateY(1px);}.ds-btn-quiet:focus-visible{outline:2px solid var(--ink,#1c2566);outline-offset:2px;}"
+    },
+    {
+      "name": "Form Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Printed label over a stock field; ink-and-canary focus ring.",
+      "html": "<label class=\"ds-field-wrap\"><span class=\"ds-label\">Budget, maximum</span><input class=\"ds-field\" placeholder=\"4,000\"></label>",
+      "css": ".ds-field-wrap{display:flex;flex-direction:column;gap:0.375rem;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;}.ds-label{font-stretch:75%;font-weight:600;font-size:0.875rem;line-height:1.2;letter-spacing:0.01em;color:var(--ink-2,#4a5183);}.ds-field{min-height:2.75rem;border:1px solid var(--rule-strong,#767ea9);background:var(--stock,#fbfbf9);border-radius:2px;padding:0.625rem 0.75rem;font:inherit;font-size:1rem;color:var(--ink,#1c2566);transition:border-color 150ms cubic-bezier(0.16,1,0.3,1),box-shadow 150ms cubic-bezier(0.16,1,0.3,1);}.ds-field::placeholder{color:var(--ink-2,#4a5183);opacity:0.85;}.ds-field:hover{border-color:var(--ink-2,#4a5183);}.ds-field:focus{outline:none;border-color:var(--ink,#1c2566);box-shadow:0 0 0 1px var(--ink,#1c2566),0 0 0 4px var(--canary,#f4d54a);}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Stock bar; current page in ink with a 3px canary underline.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-nav-mark\">Docket</strong><a href=\"#\" class=\"ds-nav-link\" aria-current=\"page\">Open jobs</a><a href=\"#\" class=\"ds-nav-link\">Your quotes</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.5rem;height:4rem;padding:0 1.25rem;background:var(--stock,#fbfbf9);border-bottom:1px solid var(--rule-strong,#767ea9);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;}.ds-nav-mark{font-size:1.5rem;font-weight:800;font-stretch:70%;color:var(--ink,#1c2566);margin-right:auto;}.ds-nav-link{position:relative;display:inline-flex;align-items:center;min-height:2.75rem;font-weight:500;color:var(--ink-2,#4a5183);text-decoration:none;transition:color 150ms;}.ds-nav-link:hover{color:var(--ink,#1c2566);}.ds-nav-link[aria-current=page]{color:var(--ink,#1c2566);}.ds-nav-link[aria-current=page]::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--canary,#f4d54a);}.ds-nav-link:focus-visible{outline:2px solid var(--ink,#1c2566);outline-offset:2px;}"
+    },
+    {
+      "name": "Stamp",
+      "kind": "chip",
+      "refersTo": "stamp",
+      "description": "Status as a mark: the word in a double-ruled stamp border, set askew.",
+      "html": "<span class=\"ds-stamp ds-open\">Open</span> <span class=\"ds-stamp ds-progress\">In progress</span> <span class=\"ds-stamp ds-void\">Declined</span>",
+      "css": ".ds-stamp{display:inline-flex;align-items:center;padding:0.1875rem 0.5rem 0.1875rem 0.4375rem;border:2px solid currentColor;border-radius:3px;font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-stretch:75%;font-weight:700;font-size:0.875rem;line-height:1.1;letter-spacing:0.02em;white-space:nowrap;box-shadow:inset 0 0 0 1px var(--stock,#fbfbf9),inset 0 0 0 2px currentColor;transform:rotate(-1deg);}.ds-open{color:var(--stamp-open,#1d6a46);}.ds-progress{color:var(--stamp-progress,#855400);}.ds-void{color:var(--stamp-void,#a12e28);}"
+    },
+    {
+      "name": "Ticket",
+      "kind": "card",
+      "refersTo": "ticket",
+      "description": "Work-order ticket: stub with number and stamp, perforated tear line, ruled label-over-value body.",
+      "html": "<article class=\"ds-ticket\"><div class=\"ds-stub\"><span class=\"ds-no\">No. 7C41E2</span><span class=\"ds-stamp-s\">Open</span></div><div class=\"ds-perf\"></div><div class=\"ds-body\"><h3 class=\"ds-title\">Move our office network onto a managed firewall</h3><dl class=\"ds-dl\"><div><dt>Category</dt><dd>Networking</dd></div><div><dt>Budget</dt><dd class=\"ds-num\">$2,500 – $4,000</dd></div></dl></div></article>",
+      "css": ".ds-ticket{background:var(--stock,#fbfbf9);border:1px solid var(--rule-strong,#767ea9);border-radius:2px;box-shadow:0 1px 0 var(--rule,#cdd1e2),0 10px 24px -18px rgb(28 37 102 / 0.45);color:var(--ink,#1c2566);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;}.ds-stub{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.75rem;}.ds-no{font-stretch:75%;font-weight:600;letter-spacing:0.04em;font-variant-numeric:tabular-nums;color:var(--ink-2,#4a5183);}.ds-stamp-s{color:var(--stamp-open,#1d6a46);border:2px solid currentColor;border-radius:3px;padding:0.1875rem 0.5rem;font-stretch:75%;font-weight:700;font-size:0.875rem;box-shadow:inset 0 0 0 1px var(--stock,#fbfbf9),inset 0 0 0 2px currentColor;transform:rotate(-2deg);}.ds-perf{height:10px;background-image:radial-gradient(circle at 5px 5px,var(--desk,#e8eaf0) 3px,transparent 3.5px);background-size:14px 10px;background-repeat:repeat-x;background-position:3px 0;border-top:1px dashed var(--rule-strong,#767ea9);}.ds-body{padding:1.5rem 1.75rem;}.ds-title{margin:0;font-size:1.5rem;font-weight:700;font-stretch:75%;line-height:1.1;}.ds-dl{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.25rem 0 0;padding:1rem 0;border-top:1px solid var(--rule,#cdd1e2);border-bottom:1px solid var(--rule,#cdd1e2);}.ds-dl dt{font-stretch:75%;font-weight:600;font-size:0.875rem;color:var(--ink-2,#4a5183);}.ds-dl dd{margin:0.25rem 0 0;}.ds-num{font-variant-numeric:tabular-nums;}"
+    },
+    {
+      "name": "Copy Sheet Quote",
+      "kind": "card",
+      "refersTo": "copy-sheet",
+      "description": "Canary carbon copy holding a quote; accepted quotes carry a green inset ring.",
+      "html": "<div class=\"ds-sheet ds-accepted\"><div class=\"ds-row\"><strong>R. Okafor</strong><span class=\"ds-amt\">$3,200</span></div><p class=\"ds-note\">Can start Monday. Two evenings on site.</p></div>",
+      "css": ".ds-sheet{background:var(--wash,#fbf1c0);border:1px solid var(--rule-strong,#767ea9);border-radius:2px;padding:1.25rem 1.5rem 1rem;color:var(--ink,#1c2566);font-family:Archivo,ui-sans-serif,system-ui,sans-serif;}.ds-accepted{box-shadow:inset 0 0 0 2px var(--stamp-open,#1d6a46);}.ds-row{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;}.ds-amt{font-size:1.25rem;font-weight:700;font-stretch:80%;font-variant-numeric:tabular-nums;}.ds-note{margin:0.5rem 0 0;font-size:0.875rem;color:var(--ink-2,#4a5183);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Work-Order Docket",
+    "overview": "Every job is a numbered work-order ticket printed on bright form stock and laid on a cool blue-grey desk. The ticket carries a stub with its number and state, a perforated tear line, and ruled fields where a printed label sits over the value someone wrote in. Quotes arrive as canary carbon copies stacked beneath the ticket. State is a rubber stamp: a word inside a double-ruled border, set slightly askew. The whole product, landing page and working screens alike, speaks this one office-stationery language.\n\nDensity follows the role. The browse and dashboard screens are ruled registers built for scanning category, budget and age; the job ticket and its quotes give more air to reading. Colour is carbon ink on paper. Contrast comes from ink strength, not from greys: secondary text is the same carbon blue at lower strength, and every rule and border is tinted toward the ink. Canary is the one committed field: the primary action, the quotes, the text selection, the closing band.\n\nIt refuses the SaaS hero-plus-three-cards arrangement and the rounded, shadowed card grid. Corners are nearly square, borders are hairlines, and depth reads as paper lying on a desk, not as floating cards.",
+    "keyCharacteristics": [
+      "Form-white stock on a cool desk, carbon-blue ink, canary copy sheets.",
+      "One family (Archivo) in two voices: condensed for printed labels and headings, normal width for written values.",
+      "Ticket stub, perforated tear line, ruled fields, stamped state.",
+      "Money and ticket numbers always in tabular figures.",
+      "Hairline borders and 2px corners throughout."
+    ],
+    "rules": [
+      {
+        "name": "The No Mid-Grey Rule",
+        "body": "There is no neutral grey. Secondary text is carbon ink at lower strength (ink-2); every border and rule is blue-tinted toward the ink. A new neutral must sit on the ink hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Canary Commit Rule",
+        "body": "Canary means commitment: the one action that moves a ticket forward, the carbon copies quotes live on, and the marks of where you are (active-nav underline, selection, skip link). At most one full canary field per page. Never a second competing canary button on the same view.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamp Rule",
+        "body": "Status is a mark, never hue alone: the word, in a stamp border, in its stamp ink. Colour may reinforce a sentence (budget verdicts) but the sentence always carries the meaning.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Condensed is printed, normal width is written. Labels and headings are condensed; entered values, names and running text never are.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Money Rule",
+        "body": "Every amount, budget and ticket number sets in tabular figures so registers align by column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper On A Desk Rule",
+        "body": "One lifted object per group: the ticket. Sheets beneath it and rows inside it stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put every job on a ticket: stub with \"No.\" plus the six-character id, a stamp, the perforation, then ruled label-over-value fields.",
+      "Do set labels and headings condensed and written values at normal width.",
+      "Do carry state as a stamp word with its border; use colour only to reinforce.",
+      "Do keep amounts, budgets and ticket numbers in tabular figures.",
+      "Do use canary for the single forward action and for quote sheets; use the ink button for a second firm commit.",
+      "Do separate content with hairline rules in blue-tinted ruling, and keep corners at 2px.",
+      "Do honour reduced motion: the copy-sheet fan and all transitions collapse to near-instant."
+    ],
+    "donts": [
+      "Don't introduce a neutral grey; secondary tones come from the ink hue.",
+      "Don't signal status by colour alone or by a coloured dot or pill.",
+      "Don't build the hero-plus-three-cards layout or grids of rounded, shadowed cards.",
+      "Don't lift anything other than the ticket; copy sheets and rows stay flat.",
+      "Don't round rectangular elements past 3px or use pill shapes for buttons, tags or stamps; circles are reserved for the radio mark and punched holes.",
+      "Don't show invented activity, logos, stats or testimonials; illustrative content wears a visible \"Example\" tag."
+    ]
+  }
+}
