@@ -1,82 +1,372 @@
 @import "tailwindcss";
 
+/*
+  Docket — work-order ticket system.
+  Form-white stock on a cool desk, carbon-blue ink, canary copy sheets.
+  No mid-greys: secondary text is carbon ink at lower strength.
+*/
 :root {
-  --paper: #eef0ec;
-  --paper-raised: #f8f8f5;
-  --ink: #16213e;
-  --ink-soft: #4b5468;
-  --teal: #0e7c7b;
-  --teal-dark: #0a5f5e;
-  --amber: #c97a2b;
-  --forest: #2f6d4f;
-  --rust: #b24d3e;
-  --border: #d8d6cc;
+  --desk: #e8eaf0;
+  --stock: #fbfbf9;
+  --ink: #1c2566;
+  --ink-2: #4a5183;
+  --rule: #cdd1e2;
+  --rule-strong: #767ea9;
+  --canary: #f4d54a;
+  --canary-deep: #e6c21c;
+  --wash: #fbf1c0;
+  --stamp-open: #1d6a46;
+  --stamp-progress: #855400;
+  --stamp-void: #a12e28;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-raised: var(--paper-raised);
+  --color-desk: var(--desk);
+  --color-stock: var(--stock);
   --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-teal: var(--teal);
-  --color-teal-dark: var(--teal-dark);
-  --color-amber: var(--amber);
-  --color-forest: var(--forest);
-  --color-rust: var(--rust);
-  --color-border: var(--border);
-  --font-display: var(--font-space-grotesk);
-  --font-body: var(--font-plex-sans);
+  --color-ink-2: var(--ink-2);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-canary: var(--canary);
+  --color-canary-deep: var(--canary-deep);
+  --color-wash: var(--wash);
+  --color-stamp-open: var(--stamp-open);
+  --color-stamp-progress: var(--stamp-progress);
+  --color-stamp-void: var(--stamp-void);
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --ease-out: var(--ease-out);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--rule-strong) var(--desk);
 }
 
 body {
-  background: var(--paper);
+  background: var(--desk);
   color: var(--ink);
-  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  font-variation-settings: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: -0.01em;
+::selection {
+  background: var(--canary);
+  color: var(--ink);
 }
+
+input,
+textarea,
+select {
+  caret-color: var(--ink);
+}
+
+h1,
+h2,
+h3 {
+  font-stretch: 75%;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 50;
+  background: var(--canary);
+  color: var(--ink);
+  padding: 0.5rem 0.875rem;
+  font-weight: 600;
+  transition: top 150ms var(--ease-out);
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* ---------- Type roles ---------- */
+
+/* Printed form labels: condensed, like the pre-printed text on a work order. */
+.label {
+  font-stretch: 75%;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--ink-2);
+}
+
+/* Money and IDs always sit in tabular figures. */
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.ticket-no {
+  font-stretch: 75%;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.link {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  transition: text-decoration-color 150ms var(--ease-out);
+}
+.link:hover {
+  text-decoration-color: var(--ink);
+}
+
+/* ---------- Form controls ---------- */
 
 .field {
+  display: block;
   width: 100%;
-  border: 1px solid var(--border);
-  background: var(--paper-raised);
-  border-radius: 4px;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.95rem;
+  min-height: 2.75rem;
+  border: 1px solid var(--rule-strong);
+  background: var(--stock);
+  border-radius: 2px;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.4;
   color: var(--ink);
+  transition:
+    border-color 150ms var(--ease-out),
+    box-shadow 150ms var(--ease-out);
 }
-.field:focus {
-  outline: 2px solid var(--teal);
-  outline-offset: 1px;
-  border-color: var(--teal);
+.field::placeholder {
+  color: var(--ink-2);
+  opacity: 0.85;
+}
+.field:hover {
+  border-color: var(--ink-2);
+}
+.field:focus,
+.field:focus-visible {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px var(--ink), 0 0 0 4px var(--canary);
+}
+.field[aria-invalid="true"] {
+  border-color: var(--stamp-void);
+}
+textarea.field {
+  resize: vertical;
+  min-height: 7rem;
+}
+select.field {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%231c2566' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
 }
 
-.btn-primary {
-  background: var(--teal);
-  color: var(--paper-raised);
-  border-radius: 4px;
-  padding: 0.6rem 1.1rem;
-  font-weight: 500;
-  transition: background-color 0.15s ease;
+/* Prefix adornment for currency fields: "$" printed on the form. */
+.field-affix {
+  position: relative;
 }
-.btn-primary:hover {
-  background: var(--teal-dark);
+.field-affix > span {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-2);
+  pointer-events: none;
 }
-.btn-primary:disabled {
-  opacity: 0.5;
+.field-affix > .field {
+  padding-left: 1.625rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary,
+.btn-quiet,
+.btn-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out),
+    color 150ms var(--ease-out),
+    transform 100ms var(--ease-out);
+}
+.btn-primary:active,
+.btn-quiet:active,
+.btn-ink:active {
+  transform: translateY(1px);
+}
+.btn-primary:disabled,
+.btn-quiet:disabled,
+.btn-ink:disabled {
   cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+/* Canary: the one action that moves a ticket forward. */
+.btn-primary {
+  background: var(--canary);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--canary-deep);
+}
+
+/* Ink: a firm secondary commit (e.g. accept a quote). */
+.btn-ink {
+  background: var(--ink);
+  color: var(--stock);
+  border: 1px solid var(--ink);
+}
+.btn-ink:hover:not(:disabled) {
+  background: #121a4f;
 }
 
 .btn-quiet {
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 0.6rem 1.1rem;
+  background: transparent;
   color: var(--ink);
-  transition: border-color 0.15s ease;
+  border: 1px solid var(--rule-strong);
 }
-.btn-quiet:hover {
-  border-color: var(--ink-soft);
+.btn-quiet:hover:not(:disabled) {
+  border-color: var(--ink);
+  background: var(--stock);
+}
+
+.btn-sm {
+  min-height: 2.25rem;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.9375rem;
+}
+
+/* ---------- Ticket ---------- */
+
+.ticket {
+  position: relative;
+  background: var(--stock);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--rule), 0 10px 24px -18px rgb(28 37 102 / 0.45);
+}
+
+/* A row of punched holes: the tear line between the stub and the body. */
+.perf {
+  height: 10px;
+  background-image: radial-gradient(circle at 5px 5px, var(--desk) 3px, transparent 3.5px);
+  background-size: 14px 10px;
+  background-repeat: repeat-x;
+  background-position: 3px 0;
+  border-top: 1px dashed var(--rule-strong);
+}
+
+/* Canary carbon copy — bids live on these. */
+.copy-sheet {
+  background: var(--wash);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+}
+
+/* Ruled lines, like the writing lines on a printed form. */
+.ruled > * + * {
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- Stamp ---------- */
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.1875rem 0.5rem 0.1875rem 0.4375rem;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  font-stretch: 75%;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1px var(--stock), inset 0 0 0 2px currentColor;
+}
+.stamp-lg {
+  font-size: 1.0625rem;
+  padding: 0.3125rem 0.75rem 0.3125rem 0.625rem;
+  transform: rotate(-2deg);
+}
+
+/* ---------- Loading ---------- */
+
+.skeleton {
+  background: linear-gradient(90deg, var(--rule) 0%, #dde0ec 50%, var(--rule) 100%);
+  background-size: 200% 100%;
+  animation: skeleton 1.4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes skeleton {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* ---------- Landing: carbon copies fan out once on load ---------- */
+
+@keyframes fan-out {
+  from {
+    transform: translate(0, -40px) rotate(0deg);
+  }
+}
+.fan {
+  animation: fan-out 700ms var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
