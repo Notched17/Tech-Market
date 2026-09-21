@@ -3,8 +3,8 @@ import { Chivo, Chivo_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
-// Chivo for everything people read; Chivo Mono only for measurements
-// (money, job numbers, dates), the way a drawing sets its dimensions.
+// Chivo for everything people read (money in tabular figures); Chivo Mono
+// only for sheet numbers, the way a drawing sets its identifiers.
 const chivo = Chivo({
   variable: "--font-chivo",
   subsets: ["latin"],

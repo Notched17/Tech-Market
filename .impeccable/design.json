@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T12:01:44+00:00",
+  "title": "Design System: Docket",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Grid Ground",
+        "canonical": "#eef3f9",
+        "tonalRamp": [
+          "oklch(15% 0.010 252.8)",
+          "oklch(26% 0.010 252.8)",
+          "oklch(38% 0.010 252.8)",
+          "oklch(49% 0.010 252.8)",
+          "oklch(61% 0.010 252.8)",
+          "oklch(72% 0.010 252.8)",
+          "oklch(84% 0.010 252.8)",
+          "oklch(95% 0.010 252.8)"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet Stock",
+        "canonical": "#fbfcfe",
+        "tonalRamp": [
+          "oklch(15% 0.003 264.5)",
+          "oklch(26% 0.003 264.5)",
+          "oklch(38% 0.003 264.5)",
+          "oklch(49% 0.003 264.5)",
+          "oklch(61% 0.003 264.5)",
+          "oklch(72% 0.003 264.5)",
+          "oklch(84% 0.003 264.5)",
+          "oklch(95% 0.003 264.5)"
+        ]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Blue Tint",
+        "canonical": "#e3ecf7",
+        "tonalRamp": [
+          "oklch(15% 0.018 253.3)",
+          "oklch(26% 0.018 253.3)",
+          "oklch(38% 0.018 253.3)",
+          "oklch(49% 0.018 253.3)",
+          "oklch(61% 0.018 253.3)",
+          "oklch(72% 0.018 253.3)",
+          "oklch(84% 0.018 253.3)",
+          "oklch(95% 0.018 253.3)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Blueline Ink",
+        "canonical": "#12213a",
+        "tonalRamp": [
+          "oklch(15% 0.052 260.1)",
+          "oklch(26% 0.052 260.1)",
+          "oklch(38% 0.052 260.1)",
+          "oklch(49% 0.052 260.1)",
+          "oklch(61% 0.052 260.1)",
+          "oklch(72% 0.052 260.1)",
+          "oklch(84% 0.052 260.1)",
+          "oklch(95% 0.052 260.1)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#475872",
+        "tonalRamp": [
+          "oklch(15% 0.048 258.7)",
+          "oklch(26% 0.048 258.7)",
+          "oklch(38% 0.048 258.7)",
+          "oklch(49% 0.048 258.7)",
+          "oklch(61% 0.048 258.7)",
+          "oklch(72% 0.048 258.7)",
+          "oklch(84% 0.048 258.7)",
+          "oklch(95% 0.048 258.7)"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Blueprint Blue",
+        "canonical": "#1a4e9e",
+        "tonalRamp": [
+          "oklch(15% 0.141 259.2)",
+          "oklch(26% 0.141 259.2)",
+          "oklch(38% 0.141 259.2)",
+          "oklch(49% 0.141 259.2)",
+          "oklch(61% 0.141 259.2)",
+          "oklch(72% 0.141 259.2)",
+          "oklch(84% 0.141 259.2)",
+          "oklch(95% 0.141 259.2)"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Blueprint",
+        "canonical": "#133c7b",
+        "tonalRamp": [
+          "oklch(15% 0.117 259.2)",
+          "oklch(26% 0.117 259.2)",
+          "oklch(38% 0.117 259.2)",
+          "oklch(49% 0.117 259.2)",
+          "oklch(61% 0.117 259.2)",
+          "oklch(72% 0.117 259.2)",
+          "oklch(84% 0.117 259.2)",
+          "oklch(95% 0.117 259.2)"
+        ]
+      },
+      "on-blue": {
+        "role": "primary",
+        "displayName": "Blueprint White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(38% 0.000 89.9)",
+          "oklch(49% 0.000 89.9)",
+          "oklch(61% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "grid": {
+        "role": "neutral",
+        "displayName": "Grid Line",
+        "canonical": "#d9e4f2",
+        "tonalRamp": [
+          "oklch(15% 0.022 254.4)",
+          "oklch(26% 0.022 254.4)",
+          "oklch(38% 0.022 254.4)",
+          "oklch(49% 0.022 254.4)",
+          "oklch(61% 0.022 254.4)",
+          "oklch(72% 0.022 254.4)",
+          "oklch(84% 0.022 254.4)",
+          "oklch(95% 0.022 254.4)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#c3d2e6",
+        "tonalRamp": [
+          "oklch(15% 0.032 255.6)",
+          "oklch(26% 0.032 255.6)",
+          "oklch(38% 0.032 255.6)",
+          "oklch(49% 0.032 255.6)",
+          "oklch(61% 0.032 255.6)",
+          "oklch(72% 0.032 255.6)",
+          "oklch(84% 0.032 255.6)",
+          "oklch(95% 0.032 255.6)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#7f93b3",
+        "tonalRamp": [
+          "oklch(15% 0.053 259.7)",
+          "oklch(26% 0.053 259.7)",
+          "oklch(38% 0.053 259.7)",
+          "oklch(49% 0.053 259.7)",
+          "oklch(61% 0.053 259.7)",
+          "oklch(72% 0.053 259.7)",
+          "oklch(84% 0.053 259.7)",
+          "oklch(95% 0.053 259.7)"
+        ]
+      },
+      "paleline": {
+        "role": "neutral",
+        "displayName": "Pale Line",
+        "canonical": "#a9c1e4",
+        "tonalRamp": [
+          "oklch(15% 0.056 257.7)",
+          "oklch(26% 0.056 257.7)",
+          "oklch(38% 0.056 257.7)",
+          "oklch(49% 0.056 257.7)",
+          "oklch(61% 0.056 257.7)",
+          "oklch(72% 0.056 257.7)",
+          "oklch(84% 0.056 257.7)",
+          "oklch(95% 0.056 257.7)"
+        ]
+      },
+      "redline": {
+        "role": "tertiary",
+        "displayName": "Drafter's Redline",
+        "canonical": "#b7331c",
+        "tonalRamp": [
+          "oklch(15% 0.160 32.3)",
+          "oklch(26% 0.160 32.3)",
+          "oklch(38% 0.160 32.3)",
+          "oklch(49% 0.160 32.3)",
+          "oklch(61% 0.160 32.3)",
+          "oklch(72% 0.160 32.3)",
+          "oklch(84% 0.160 32.3)",
+          "oklch(95% 0.160 32.3)"
+        ]
+      },
+      "redline-wash": {
+        "role": "tertiary",
+        "displayName": "Redline Wash",
+        "canonical": "#fbeeeb",
+        "tonalRamp": [
+          "oklch(15% 0.015 33.1)",
+          "oklch(26% 0.015 33.1)",
+          "oklch(38% 0.015 33.1)",
+          "oklch(49% 0.015 33.1)",
+          "oklch(61% 0.015 33.1)",
+          "oklch(72% 0.015 33.1)",
+          "oklch(84% 0.015 33.1)",
+          "oklch(95% 0.015 33.1)"
+        ]
+      },
+      "approved": {
+        "role": "tertiary",
+        "displayName": "Approved Green",
+        "canonical": "#1e6a45",
+        "tonalRamp": [
+          "oklch(15% 0.095 157.8)",
+          "oklch(26% 0.095 157.8)",
+          "oklch(38% 0.095 157.8)",
+          "oklch(49% 0.095 157.8)",
+          "oklch(61% 0.095 157.8)",
+          "oklch(72% 0.095 157.8)",
+          "oklch(84% 0.095 157.8)",
+          "oklch(95% 0.095 157.8)"
+        ]
+      },
+      "hold": {
+        "role": "tertiary",
+        "displayName": "Hold Amber",
+        "canonical": "#8a5500",
+        "tonalRamp": [
+          "oklch(15% 0.109 68.7)",
+          "oklch(26% 0.109 68.7)",
+          "oklch(38% 0.109 68.7)",
+          "oklch(49% 0.109 68.7)",
+          "oklch(61% 0.109 68.7)",
+          "oklch(72% 0.109 68.7)",
+          "oklch(84% 0.109 68.7)",
+          "oklch(95% 0.109 68.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Landing headline and closing blueprint-band headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page, notice and job titles; 3rem from sm."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section heads and sheet titles; register row titles at 1.125-1.25rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, capped at 65-68ch."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opening paragraphs in faded ink."
+      },
+      "label": {
+        "displayName": "Note",
+        "purpose": "Annotation text: hints, column heads, region labels, meta; sentence case, no tracking."
+      },
+      "measure": {
+        "displayName": "Measure",
+        "purpose": "Money and counts in tabular Chivo figures."
+      },
+      "sheet-number": {
+        "displayName": "Sheet number",
+        "purpose": "Chivo Mono, sheet numbers only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-frame",
+        "value": "inset 0 0 0 5px var(--sheet), inset 0 0 0 6px var(--rule), 0 12px 28px -22px rgb(18 33 58 / 0.55)",
+        "purpose": "Every drawing sheet: inner frame plus one soft drop."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 1px var(--blue), 0 0 0 4px var(--tint)",
+        "purpose": "Focused fields."
+      },
+      {
+        "name": "option-selected",
+        "value": "inset 0 0 0 1px var(--blue)",
+        "purpose": "Checked option card."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions and the drawing moment."
+      },
+      {
+        "name": "state",
+        "value": "150ms",
+        "purpose": "Colour, border and focus transitions."
+      },
+      {
+        "name": "press",
+        "value": "100ms translateY(1px)",
+        "purpose": "Button active press."
+      },
+      {
+        "name": "draw-line",
+        "value": "900ms scaleX from 0, origin left",
+        "purpose": "Dimension line draws once on the landing."
+      },
+      {
+        "name": "settle",
+        "value": "500ms from translateY(-10px) and opacity 0; 650ms delay, 140ms stagger",
+        "purpose": "Quote markers settle onto the budget line."
+      },
+      {
+        "name": "skeleton",
+        "value": "1.4s ease-in-out infinite, tint to grid",
+        "purpose": "Loading rows."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "grid": {
+      "fine": "8px",
+      "major": "40px",
+      "ground": "linear-gradient(var(--grid) 1px, transparent 1px) 40px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 40px, plus 8px lines at 45% grid"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Blueprint blue, square; the action that moves a job forward.",
+      "html": "<button class=\"ds-btn-primary\">Post a job</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0.625rem 1.25rem;border-radius:0;border:1px solid var(--blue,#1a4e9e);background:var(--blue,#1a4e9e);color:#fff;font:600 1rem/1.2 Chivo,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1),transform 100ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-primary:hover{background:var(--blue-deep,#133c7b);border-color:var(--blue-deep,#133c7b)}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid var(--blue,#1a4e9e);outline-offset:3px}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Sheet-filled secondary action beside a primary.",
+      "html": "<button class=\"ds-btn-quiet\">Find work</button>",
+      "css": ".ds-btn-quiet{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0.625rem 1.25rem;border-radius:0;border:1px solid var(--rule-strong,#7f93b3);background:var(--sheet,#fbfcfe);color:var(--ink,#12213a);font:600 1rem/1.2 Chivo,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:border-color 150ms cubic-bezier(0.16,1,0.3,1),color 150ms cubic-bezier(0.16,1,0.3,1),transform 100ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-quiet:hover{border-color:var(--blue,#1a4e9e);color:var(--blue,#1a4e9e)}.ds-btn-quiet:active{transform:translateY(1px)}.ds-btn-quiet:focus-visible{outline:2px solid var(--blue,#1a4e9e);outline-offset:3px}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Redline outline; Decline only.",
+      "html": "<button class=\"ds-btn-danger\">Decline</button>",
+      "css": ".ds-btn-danger{display:inline-flex;align-items:center;justify-content:center;min-height:2.25rem;padding:0.375rem 0.875rem;border-radius:0;border:1px solid var(--redline,#b7331c);background:var(--sheet,#fbfcfe);color:var(--redline,#b7331c);font:600 0.9375rem/1.2 Chivo,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-danger:hover{background:#fbeeeb}.ds-btn-danger:active{transform:translateY(1px)}.ds-btn-danger:focus-visible{outline:2px solid var(--blue,#1a4e9e);outline-offset:3px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Square sheet-filled input with label and note hint; blue ring and tint halo on focus.",
+      "html": "<label class=\"ds-field-wrap\"><span class=\"ds-field-label\">Job title</span><input class=\"ds-field\" placeholder=\"e.g. Move our office network onto a managed firewall\"><span class=\"ds-note\">Say what needs doing in a sentence.</span></label>",
+      "css": ".ds-field-wrap{display:flex;flex-direction:column;gap:0.375rem;font-family:Chivo,ui-sans-serif,system-ui,sans-serif;color:var(--ink,#12213a)}.ds-field-label{font-weight:600}.ds-note{font-size:0.875rem;line-height:1.3;font-weight:500;color:var(--ink-2,#475872)}.ds-field{min-height:2.75rem;border:1px solid var(--rule-strong,#7f93b3);background:var(--sheet,#fbfcfe);border-radius:0;padding:0.625rem 0.75rem;font:1rem/1.4 Chivo,ui-sans-serif,system-ui,sans-serif;color:var(--ink,#12213a);caret-color:var(--blue,#1a4e9e);transition:border-color 150ms cubic-bezier(0.16,1,0.3,1),box-shadow 150ms cubic-bezier(0.16,1,0.3,1)}.ds-field::placeholder{color:var(--ink-2,#475872);opacity:0.8}.ds-field:hover{border-color:var(--ink-2,#475872)}.ds-field:focus,.ds-field:focus-visible{outline:none;border-color:var(--blue,#1a4e9e);box-shadow:0 0 0 1px var(--blue,#1a4e9e),0 0 0 4px var(--tint,#e3ecf7)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sheet bar with the dimension-line wordmark; current page blue with a 2px underline bar.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-wordmark\"><span>Docket</span><svg viewBox=\"0 0 80 8\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M0.75 0v8M79.25 0v8\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M1.5 4H78.5\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M1.5 4L7 1.5V6.5zM78.5 4L73 1.5V6.5z\" fill=\"currentColor\"/></svg></span><nav class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link is-current\" aria-current=\"page\">Open jobs</a><a href=\"#\" class=\"ds-nav-link\">Your jobs</a></nav></header>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:4rem;padding:0 1.25rem;background:var(--sheet,#fbfcfe);border-bottom:1px solid var(--rule-strong,#7f93b3);font-family:Chivo,ui-sans-serif,system-ui,sans-serif}.ds-wordmark{display:inline-flex;flex-direction:column;line-height:1;color:var(--ink,#12213a);font-size:1.375rem;font-weight:800;letter-spacing:-0.03em}.ds-wordmark svg{margin-top:0.25rem;height:0.5rem;width:100%;color:var(--blue,#1a4e9e)}.ds-nav-links{display:flex;gap:1.75rem}.ds-nav-link{position:relative;display:inline-flex;align-items:center;min-height:2.75rem;font-weight:500;color:var(--ink,#12213a);text-decoration:none;transition:color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-nav-link:hover{color:var(--blue,#1a4e9e)}.ds-nav-link.is-current{color:var(--blue,#1a4e9e)}.ds-nav-link.is-current::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--blue,#1a4e9e)}.ds-nav-link:focus-visible{outline:2px solid var(--blue,#1a4e9e);outline-offset:3px}"
+    },
+    {
+      "name": "Sheet with Title Block",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "The document surface: double frame, one soft drop, ruled title block in the corner.",
+      "html": "<article class=\"ds-sheet\"><h3 class=\"ds-sheet-title\">Move our office network onto a managed firewall</h3><p class=\"ds-sheet-body\">Replace the ISP router with a managed firewall and keep guest Wi-Fi apart.</p><dl class=\"ds-title-block\"><div><dt>Sheet</dt><dd class=\"ds-sheet-no\">No. 7C41E2</dd></div><div><dt>State</dt><dd class=\"ds-state\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.75\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>Open</dd></div><div class=\"ds-wide\"><dt>Category</dt><dd>Networking</dd></div></dl></article>",
+      "css": ".ds-sheet{position:relative;max-width:34rem;padding:1.75rem;background:var(--sheet,#fbfcfe);border:1px solid var(--rule-strong,#7f93b3);box-shadow:inset 0 0 0 5px var(--sheet,#fbfcfe),inset 0 0 0 6px var(--rule,#c3d2e6),0 12px 28px -22px rgb(18 33 58 / 0.55);font-family:Chivo,ui-sans-serif,system-ui,sans-serif;color:var(--ink,#12213a)}.ds-sheet-title{margin:0;font-size:1.5rem;font-weight:700;line-height:1.2;letter-spacing:-0.02em}.ds-sheet-body{margin:0.75rem 0 1.5rem;color:var(--ink-2,#475872);line-height:1.55}.ds-title-block{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:0 0 0 auto;max-width:19rem;border:1.5px solid var(--ink,#12213a);background:var(--ink,#12213a)}.ds-title-block>div{padding:0.5rem 0.75rem;background:var(--sheet,#fbfcfe)}.ds-title-block .ds-wide{grid-column:span 2}.ds-title-block dt{font-size:0.8125rem;line-height:1.3;font-weight:500;color:var(--ink-2,#475872)}.ds-title-block dd{margin:0.125rem 0 0;font-weight:600}.ds-sheet-no{font-family:\"Chivo Mono\",ui-monospace,\"SF Mono\",monospace;font-weight:400;letter-spacing:0}.ds-state{display:inline-flex;align-items:center;gap:0.375rem;font-size:0.875rem;color:var(--blue,#1a4e9e)}"
+    },
+    {
+      "name": "State Mark",
+      "kind": "chip",
+      "refersTo": "state-mark",
+      "description": "Drawing-legend symbol plus its word; colour only reinforces.",
+      "html": "<span class=\"ds-marks\"><span class=\"ds-mark ds-open\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.75\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>Open</span><span class=\"ds-mark ds-hold\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.75\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M6 1.25a4.75 4.75 0 0 1 0 9.5z\" fill=\"currentColor\"/></svg>In progress</span><span class=\"ds-mark ds-ok\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"5.25\" fill=\"currentColor\"/></svg>Accepted</span><span class=\"ds-mark ds-red\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"6\" r=\"4.75\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M3.4 3.4l5.2 5.2M8.6 3.4l-5.2 5.2\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg>Declined</span></span>",
+      "css": ".ds-marks{display:flex;flex-wrap:wrap;gap:1.25rem;font-family:Chivo,ui-sans-serif,system-ui,sans-serif}.ds-mark{display:inline-flex;align-items:center;gap:0.375rem;font-size:0.875rem;font-weight:600;white-space:nowrap}.ds-open{color:var(--blue,#1a4e9e)}.ds-hold{color:var(--hold,#8a5500)}.ds-ok{color:var(--approved,#1e6a45)}.ds-red{color:var(--redline,#b7331c)}"
+    },
+    {
+      "name": "Dimension Line",
+      "kind": "custom",
+      "refersTo": "dimension-line",
+      "description": "The budget drawn as a dimension line with quotes plotted as diamond markers coloured by verdict.",
+      "html": "<div class=\"ds-dim\"><span class=\"ds-dim-label\">$2,500 – $4,000</span><div class=\"ds-dim-track\"><span class=\"ds-dim-ext\" style=\"left:25%\"></span><span class=\"ds-dim-ext\" style=\"left:70%\"></span><span class=\"ds-dim-base\"></span><span class=\"ds-dim-line\" style=\"left:25%;width:45%\"></span></div><div class=\"ds-dim-plots\"><span class=\"ds-plot ds-within\" style=\"left:52%\"></span><span class=\"ds-plot ds-over\" style=\"left:82%\"></span></div></div>",
+      "css": ".ds-dim{position:relative;max-width:30rem;padding-top:0.25rem;font-family:Chivo,ui-sans-serif,system-ui,sans-serif}.ds-dim-label{display:block;margin-left:47.5%;transform:translateX(-50%);width:max-content;padding:0 0.375rem;background:var(--sheet,#fbfcfe);color:var(--blue,#1a4e9e);font-size:0.875rem;font-weight:600;font-variant-numeric:tabular-nums}.ds-dim-track{position:relative;height:1.25rem}.ds-dim-ext{position:absolute;top:-1rem;bottom:-6px;width:1px;background:color-mix(in srgb,var(--blue,#1a4e9e) 60%,transparent)}.ds-dim-base{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--rule,#c3d2e6)}.ds-dim-line{position:absolute;top:50%;height:1px;background:var(--blue,#1a4e9e);transform-origin:left center;animation:ds-draw 900ms cubic-bezier(0.16,1,0.3,1) both}.ds-dim-plots{position:relative;height:1rem}.ds-plot{position:absolute;top:2px;width:8px;height:8px;margin-left:-4px;border:1.5px solid currentColor;background:var(--sheet,#fbfcfe);transform:rotate(45deg)}.ds-within{color:var(--approved,#1e6a45)}.ds-over{color:var(--redline,#b7331c)}@keyframes ds-draw{from{transform:scaleX(0)}}@media (prefers-reduced-motion:reduce){.ds-dim-line{animation:none}}"
+    },
+    {
+      "name": "Drawing Register Row",
+      "kind": "custom",
+      "refersTo": "register-row-hover",
+      "description": "A list as one sheet: 1.5px ink header rule, hairline rows, whole-row link, tint on hover.",
+      "html": "<div class=\"ds-reg\"><div class=\"ds-reg-head\"><span>Sheet</span><span>Job</span><span class=\"ds-r\">Budget</span></div><a class=\"ds-reg-row\" href=\"#\"><span class=\"ds-reg-no\">No. 7C41E2</span><span class=\"ds-reg-title\">Managed firewall for a dental office</span><span class=\"ds-r ds-reg-money\">$2,500 – $4,000</span></a><a class=\"ds-reg-row\" href=\"#\"><span class=\"ds-reg-no\">No. 3A90F1</span><span class=\"ds-reg-title\">Migrate reporting database</span><span class=\"ds-r ds-reg-money\">Up to $6,000</span></a></div>",
+      "css": ".ds-reg{max-width:40rem;background:var(--sheet,#fbfcfe);border:1px solid var(--rule-strong,#7f93b3);font-family:Chivo,ui-sans-serif,system-ui,sans-serif;color:var(--ink,#12213a)}.ds-reg-head,.ds-reg-row{display:grid;grid-template-columns:6.5rem 1fr 9rem;gap:1.5rem;padding:0.75rem 1.5rem}.ds-reg-head{border-bottom:1.5px solid var(--ink,#12213a);font-size:0.875rem;font-weight:600;color:var(--ink-2,#475872)}.ds-reg-row{padding-top:1rem;padding-bottom:1rem;border-top:1px solid var(--rule,#c3d2e6);color:inherit;text-decoration:none;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-reg-head+.ds-reg-row{border-top:0}.ds-reg-row:hover,.ds-reg-row:focus-visible{background:color-mix(in srgb,var(--tint,#e3ecf7) 60%,transparent);outline:none}.ds-reg-row:hover .ds-reg-title,.ds-reg-row:focus-visible .ds-reg-title{color:var(--blue,#1a4e9e);text-decoration:underline;text-underline-offset:4px}.ds-reg-no{font-family:\"Chivo Mono\",ui-monospace,\"SF Mono\",monospace;font-size:0.875rem;color:var(--ink-2,#475872)}.ds-reg-title{font-size:1.125rem;font-weight:700}.ds-r{text-align:right}.ds-reg-money{font-weight:600;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Blueline Spec Sheet",
+    "overview": "Every job is an engineering drawing. Pages sit on a faint engineering-grid ground, and the things people act on are drawing sheets: cool white stock framed by a hairline and an inner border, with a ruled title block in the corner holding the sheet number, category and state. The budget is drawn as a dimension line with extension lines and arrowheads, and quotes are plotted against it as markers. Lists are drawing registers: a heavy ink header rule, hairline row dividers, a whole-row link.\n\nThe world is drafted, not decorated. Linework carries structure: 1px rules for division, 1.5px ink rules for anything that holds a record (title blocks, register headers, the category index). Blueprint blue is the drafting pen and the action colour; redline is the checker's pen and marks only what is wrong or refused. Corners are square everywhere. Depth is a sheet lying on a table, not a card floating off a screen.\n\nType is one family, Chivo, in sentence case throughout. Figures that get compared (money, counts) are set in Chivo's tabular figures so columns align; Chivo Mono is reserved for sheet numbers, the one identifier a drawing sets like a drawing number. The system refuses the SaaS hero-plus-card-grid and the uniform rounded shadow card.",
+    "keyCharacteristics": [
+      "Engineering-grid ground (8px fine, 40px major) with drawing sheets laid on it.",
+      "Blueprint blue for linework, links and the primary action; redline only for errors, declines, cancellations and over-budget marks.",
+      "Square corners, hairline rules, a heavier 1.5px ink rule for record-holding structures.",
+      "State shown as a drawing-legend symbol plus its word.",
+      "One typeface family; tabular Chivo for money, mono only for sheet numbers.",
+      "One motion moment per surface at most: a line that draws, markers that settle."
+    ],
+    "rules": [
+      {
+        "name": "The Drafting Pen Rule",
+        "body": "Blue is the pen that draws the sheet and the button that moves a job forward. It does not become a fill for surfaces other than primary buttons, selection, and the single closing blueprint band.",
+        "section": "colors"
+      },
+      {
+        "name": "The Redline Rule",
+        "body": "Redline marks only what is wrong, refused, cancelled or over budget. It is never decoration, never emphasis, never a brand accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Money and counts are set in Chivo with tabular figures (`tnum`); Chivo Mono is used only for sheet numbers. Reason: in the build, mono's comma spacing split amounts apart, and mono on money read as costume rather than as a drawing. Dates are not set in mono either: they render as relative words (\"3 days ago\") in note style inside a `<time>` element, with the full date in its title.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Every label, column head, title-block label and button is sentence case with default tracking. The world's native all-caps drafting lettering was deliberately not adopted.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Rule",
+        "body": "A sheet may cast one soft drop and nothing else lifts. No hover elevation, no stacked shadows, no hard offset shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do put the things people act on inside a sheet: stock fill, strong outer rule, inner hairline frame 5px in, one soft drop.",
+      "Do give every job a title block with its sheet number (mono, \"No. XXXXXX\") and its state mark.",
+      "Do draw budgets as a dimension line and plot quotes against it, with the verdict also stated in words.",
+      "Do set money and counts in Chivo with tabular figures; keep Chivo Mono for sheet numbers only.",
+      "Do show state with a legend symbol plus its word, using the fixed symbol-to-state mapping.",
+      "Do use 1px rules to divide and a 1.5px ink rule for record structures (title blocks, register headers, index tables).",
+      "Do keep every label, head and button in sentence case with default tracking.",
+      "Do keep controls at 44px minimum height (36px for the small button) with the 2px blue focus outline offset 3px."
+    ],
+    "donts": [
+      "Don't round corners on any surface or control; the radius is 0px everywhere.",
+      "Don't build a SaaS hero-plus-card-grid or use uniform rounded shadow cards.",
+      "Don't set money or dates in Chivo Mono; mono's comma spacing splits amounts and reads as costume.",
+      "Don't use redline for anything but errors, declines, cancellations and over-budget marks.",
+      "Don't let colour alone carry a state; the symbol and the word must be present.",
+      "Don't add shadows beyond the sheet's single soft drop, and never a hard offset shadow.",
+      "Don't add small uppercase or tracked labels above headlines.",
+      "Don't add more than one motion moment to a surface."
+    ]
+  }
+}
