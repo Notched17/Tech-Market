@@ -1,6 +1,6 @@
 import { formatMoney } from "@/lib/format";
 
-export type Plot = { amount: number; label?: string; emphasis?: boolean };
+export type Plot = { amount: number; label?: string; emphasis?: boolean; muted?: boolean };
 
 // How a quote sits against the budget, as a sentence. The drawing repeats it visually.
 export function budgetVerdict(amount: number, min: number | null, max: number | null) {
@@ -94,7 +94,7 @@ export default function DimensionLine({
           {plots.map((p, i) => {
             const x = pct(p.amount);
             const verdict = budgetVerdict(p.amount, min, max);
-            const color = verdict ? VERDICT_TONE[verdict.tone] : "text-ink";
+            const color = p.muted ? "text-ink-2" : verdict ? VERDICT_TONE[verdict.tone] : "text-ink";
             return (
               <span
                 key={i}

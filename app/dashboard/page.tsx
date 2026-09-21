@@ -65,7 +65,6 @@ export default function DashboardPage() {
   const isCompany = profile.role === "company";
   const jobCols = "md:grid-cols-[6rem_minmax(0,1fr)_9.5rem_10rem_7.5rem]";
   const bidCols = "md:grid-cols-[minmax(0,1fr)_8.5rem_11rem_9.5rem]";
-  const jobState = { open: "Taking quotes", in_progress: "In progress", completed: "Completed", cancelled: "Cancelled" } as const;
 
   return (
     <PageShell>
@@ -157,8 +156,8 @@ export default function DashboardPage() {
           <div aria-hidden="true" className={`hidden md:grid ${bidCols} gap-x-6 px-6 py-3 border-b-[1.5px] border-ink note font-semibold`}>
             <span>Job</span>
             <span className="text-right">Your quote</span>
-            <span>Quote</span>
-            <span>Job</span>
+            <span>Quote state</span>
+            <span>Job state</span>
           </div>
           <ul className="divide-y divide-rule">
             {bids.map((bid) => (
@@ -185,9 +184,9 @@ export default function DashboardPage() {
                   <StateMark status={bid.status} />
                 </span>
                 {bid.job && (
-                  <span className="col-span-2 md:col-span-1 note md:text-ink">
-                    <span className="md:sr-only">Job: </span>
-                    {jobState[bid.job.status]}
+                  <span className="col-span-2 md:col-span-1 flex items-center gap-2">
+                    <span className="note md:sr-only">Job:</span>
+                    <StateMark status={bid.job.status} />
                   </span>
                 )}
               </li>

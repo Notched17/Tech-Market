@@ -126,7 +126,12 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
   const hasBudget = !!(job.budget_min || job.budget_max);
 
   const plots = isOwner
-    ? live.map((b) => ({ amount: b.amount, label: b.provider?.display_name ?? "Provider", emphasis: b.status === "accepted" }))
+    ? bids.map((b) => ({
+        amount: b.amount,
+        label: `${b.provider?.display_name ?? "Provider"}${b.status === "rejected" ? " (declined)" : ""}`,
+        emphasis: b.status === "accepted",
+        muted: b.status === "rejected",
+      }))
     : myBid && !isOwner
       ? [{ amount: myBid.amount, label: "Your quote", emphasis: true }]
       : [];

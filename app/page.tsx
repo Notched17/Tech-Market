@@ -75,10 +75,7 @@ export default function Home() {
           </div>
         </div>
 
-        <figure className="lg:col-span-7 relative" aria-label="Example job sheet with three quotes plotted against its budget">
-          <span className="absolute -top-3 left-6 z-10 bg-ink text-sheet text-xs font-semibold px-2 py-1">
-            Example
-          </span>
+        <figure className="lg:col-span-7 relative" aria-label="Example job sheet, not a live job, with three quotes plotted against its budget">
           <div className="sheet px-6 sm:px-8 pt-8 pb-6">
             <div className="grid xl:grid-cols-[minmax(0,1fr)_9.5rem] gap-x-5">
               <h2 className="text-2xl sm:text-[1.75rem] leading-tight">{EXAMPLE.title}</h2>
@@ -101,6 +98,7 @@ export default function Home() {
                   { label: "State", value: <StateMark status="open" /> },
                   { label: "Category", value: EXAMPLE.category },
                   { label: "Posted by", value: EXAMPLE.company },
+                  { label: "Issue", value: "Example, not a live job", wide: true },
                 ]}
               />
             </div>
@@ -112,12 +110,19 @@ export default function Home() {
       <section className="bg-sheet border-y border-rule-strong">
         <div className="max-w-6xl mx-auto px-5 py-16 sm:py-20">
           <h2 className="text-3xl sm:text-4xl">How a job moves</h2>
-          <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 relative">
+          <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 relative border-l border-blue pl-6 sm:border-l-0 sm:pl-0">
             <span aria-hidden="true" className="hidden lg:block absolute left-0 right-0 top-[10px] h-px bg-blue" />
             {LIFECYCLE.map((step) => (
               <li key={step.title} className="relative">
-                <StateMark status={step.status} className="bg-sheet pr-2 relative" />
-                <h3 className="mt-4 text-xl">{step.title}</h3>
+                <span className="hidden lg:block">
+                  <StateMark status={step.status} className="bg-sheet pr-2 relative" />
+                </span>
+                <h3 className="lg:mt-4 text-xl flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  {step.title}
+                  <span className="lg:hidden">
+                    <StateMark status={step.status} />
+                  </span>
+                </h3>
                 <p className="mt-2 text-ink-2">{step.body}</p>
               </li>
             ))}
