@@ -22,6 +22,15 @@ const EXAMPLE_QUOTES = [
   { who: "M. Duarte", amount: 4400, accepted: false, note: "Would also replace the two ceiling access points." },
 ];
 
+const CATEGORY_NOTES: Record<string, string> = {
+  "Website build or refresh": "New sites, redesigns, speed and hosting moves.",
+  "IT help desk / support": "Ongoing or one-off support for staff, laptops and accounts.",
+  Networking: "Wi-Fi, firewalls, cabling, VPNs and office moves.",
+  Databases: "Migrations, clean-ups, reporting and backups.",
+  "Custom application development": "Internal tools, integrations and customer-facing apps.",
+  Other: "Tech work that doesn't fit the categories above.",
+};
+
 const LIFECYCLE = [
   { status: "open" as const, title: "Post the job", body: "Say what needs doing, pick a category, and give a budget range." },
   { status: "pending" as const, title: "Quotes come in", body: "Providers send a price and a short note on how they'd do it." },
@@ -181,8 +190,11 @@ export default function Home() {
         </div>
         <ul className="lg:col-span-8 ruled border-y-2 border-ink">
           {CATEGORIES.map((c) => (
-            <li key={c} className="py-4 text-xl sm:text-2xl font-semibold" style={{ fontStretch: "80%" }}>
-              {c}
+            <li key={c} className="py-4 grid sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-x-8 gap-y-1 items-baseline">
+              <span className="text-xl sm:text-2xl font-semibold" style={{ fontStretch: "80%" }}>
+                {c}
+              </span>
+              {CATEGORY_NOTES[c] && <span className="text-ink-2">{CATEGORY_NOTES[c]}</span>}
             </li>
           ))}
         </ul>
