@@ -197,7 +197,7 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
                     <li
                       key={bid.id}
                       className={`copy-sheet px-4 sm:px-5 py-4 grid sm:grid-cols-[minmax(0,1fr)_13rem] gap-x-6 gap-y-3 ${
-                        bid.status === "rejected" ? "opacity-70" : ""
+                        bid.status === "rejected" ? "bg-stock" : ""
                       } ${bid.status === "accepted" ? "shadow-[inset_0_0_0_2px_var(--stamp-open)]" : ""}`}
                     >
                       <div className="min-w-0">

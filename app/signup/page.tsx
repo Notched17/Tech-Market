@@ -75,7 +75,7 @@ export default function SignupPage() {
         as="section"
         stub={
           <>
-            <span className="label">New Docket account</span>
+            <span />
             <Link href="/login" className="text-sm link">
               Log in instead
             </Link>

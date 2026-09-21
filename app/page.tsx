@@ -17,9 +17,9 @@ const EXAMPLE_JOB = {
 };
 
 const EXAMPLE_QUOTES = [
-  { who: "R. Okafor", amount: 3200, note: "Can start Monday. Two evenings on site, no downtime in clinic hours." },
-  { who: "Lanline Networks", amount: 3850, note: "Includes a year of firmware updates and a one-page runbook." },
-  { who: "M. Duarte", amount: 4400, note: "Would also replace the two ceiling access points." },
+  { who: "R. Okafor", amount: 3200, accepted: true, note: "Can start Monday. Two evenings on site, no downtime in clinic hours." },
+  { who: "Lanline Networks", amount: 3850, accepted: false, note: "Includes a year of firmware updates and a one-page runbook." },
+  { who: "M. Duarte", amount: 4400, accepted: false, note: "Would also replace the two ceiling access points." },
 ];
 
 const LIFECYCLE = [
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:col-span-7 relative" aria-label="Example job with three quotes" role="group">
+        <div className="lg:col-span-7 relative" aria-label="Example job with three quotes, one accepted" role="group">
           <span className="absolute -top-3 right-4 z-10 bg-ink text-stock text-xs font-semibold px-2 py-1 rounded-[2px]">
             Example
           </span>
@@ -64,7 +64,7 @@ export default function Home() {
           <article className="ticket relative z-[4]">
             <div className="flex items-center justify-between gap-4 px-5 sm:px-7 py-3">
               <span className="ticket-no text-ink-2">No. {EXAMPLE_JOB.no}</span>
-              <Stamp status="open" large />
+              <Stamp status="in_progress" large />
             </div>
             <div className="perf" aria-hidden="true" />
             <div className="px-5 sm:px-7 py-6">
@@ -93,17 +93,21 @@ export default function Home() {
             {EXAMPLE_QUOTES.map((q, i) => (
               <li
                 key={q.who}
-                className="copy-sheet fan relative px-5 sm:px-7 pt-5 pb-4 -mt-1 shadow-[0_6px_14px_-12px_rgb(28_37_102/0.5)]"
+                className={`copy-sheet fan relative ${q.accepted ? "shadow-[inset_0_0_0_2px_var(--stamp-open)]" : ""} px-5 sm:px-7 pt-5 pb-4 -mt-1`}
                 style={{
                   zIndex: 3 - i,
                   marginLeft: `${(i + 1) * 0.75}rem`,
                   marginRight: `${(2 - i) * 0.5}rem`,
-                  rotate: `${[0.4, -0.5, 0.3][i]}deg`,
+                  rotate: `${[1.2, -1.6, 0.9][i]}deg`,
+                  transformOrigin: i === 1 ? "right top" : "left top",
                   animationDelay: `${150 + i * 110}ms`,
                 }}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                  <span className="font-semibold">{q.who}</span>
+                  <span className="flex items-center gap-3">
+                    <span className="font-semibold">{q.who}</span>
+                    {q.accepted && <Stamp status="accepted" />}
+                  </span>
                   <span className="num text-xl font-bold" style={{ fontStretch: "80%" }}>
                     {formatMoney(q.amount)}
                   </span>
@@ -122,15 +126,15 @@ export default function Home() {
       <section className="bg-stock border-y border-rule-strong">
         <div className="max-w-6xl mx-auto px-5 py-16 sm:py-20">
           <h2 className="text-3xl sm:text-4xl max-w-xl">How a job moves</h2>
-          <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 border-t-2 border-ink">
+          <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 border-t-2 border-dashed border-ink">
             {LIFECYCLE.map((step, i) => (
               <li
                 key={step.title}
-                className={`pt-6 pb-2 sm:pr-6 ${i > 0 ? "lg:pl-6 lg:border-l border-rule" : ""} ${
+                className={`relative -mt-[15px] pt-0 pb-2 sm:pr-6 ${i > 0 ? "lg:pl-6 lg:border-l border-rule" : ""} ${
                   i % 2 === 1 ? "sm:pl-6 sm:border-l" : ""
                 } border-rule`}
               >
-                <Stamp status={step.status} />
+                <Stamp status={step.status} className="bg-stock" />
                 <h3 className="mt-4 text-xl">{step.title}</h3>
                 <p className="mt-2 text-ink-2">{step.body}</p>
               </li>

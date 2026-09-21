@@ -50,7 +50,7 @@ function LoginForm() {
         as="section"
         stub={
           <>
-            <span className="label">Docket account</span>
+            <span />
             <Link href="/signup" className="text-sm link">
               Create an account
             </Link>

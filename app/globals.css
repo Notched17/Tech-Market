@@ -331,6 +331,9 @@ select.field {
   white-space: nowrap;
   box-shadow: inset 0 0 0 1px var(--stock), inset 0 0 0 2px currentColor;
 }
+.stamp {
+  transform: rotate(-1deg);
+}
 .stamp-lg {
   font-size: 1.0625rem;
   padding: 0.3125rem 0.75rem 0.3125rem 0.625rem;
