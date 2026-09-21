@@ -140,7 +140,7 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
         <span className="text-ink-2" aria-hidden="true">
           {" "}/{" "}
         </span>
-        <span className="measure text-ink-2" aria-current="page">
+        <span className="sheet-no text-ink-2" aria-current="page">
           No. {sheetNo(job.id)}
         </span>
       </nav>
@@ -171,7 +171,7 @@ export default function JobDetailPage(props: PageProps<"/jobs/[id]">) {
               <TitleBlock
                 className="w-full sm:w-[22rem]"
                 cells={[
-                  { label: "Sheet", value: <span className="measure">No. {sheetNo(job.id)}</span> },
+                  { label: "Sheet", value: <span className="sheet-no">No. {sheetNo(job.id)}</span> },
                   { label: "State", value: <StateMark status={job.status} /> },
                   { label: "Category", value: job.category, wide: true },
                 ]}

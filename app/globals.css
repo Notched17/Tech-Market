@@ -131,11 +131,16 @@
     color: var(--ink-2);
   }
 
-  /* Measurements: money, job numbers, dates. */
+  /* Measurements: money and counts, in tabular figures so columns align. */
   .measure {
-    font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.01em;
+    font-feature-settings: "tnum" 1;
+  }
+
+  /* Sheet numbers: the one identifier set in mono, like a drawing number. */
+  .sheet-no {
+    font-family: var(--font-mono);
+    letter-spacing: 0;
   }
 
   .link {
@@ -226,7 +231,6 @@
     transform: translateY(-50%);
     color: var(--ink-2);
     pointer-events: none;
-    font-family: var(--font-mono);
   }
   .field-affix > .field {
     padding-left: 1.75rem;

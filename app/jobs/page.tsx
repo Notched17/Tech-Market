@@ -59,7 +59,7 @@ export default function JobsPage() {
                 key={job.id}
                 className={`group relative grid grid-cols-[1fr_auto] ${cols} gap-x-6 gap-y-1.5 px-5 md:px-6 py-5 transition-colors hover:bg-tint/60 focus-within:bg-tint/60`}
               >
-                <span className="measure text-sm text-ink-2 md:pt-1">No. {sheetNo(job.id)}</span>
+                <span className="sheet-no text-sm text-ink-2 md:pt-1">No. {sheetNo(job.id)}</span>
                 <div className="col-span-2 md:col-span-1 order-3 md:order-none min-w-0">
                   <h2 className="text-xl leading-snug">
                     <Link

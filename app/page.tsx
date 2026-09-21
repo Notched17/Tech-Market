@@ -97,7 +97,7 @@ export default function Home() {
               <TitleBlock
                 className="w-full sm:w-[19rem]"
                 cells={[
-                  { label: "Sheet", value: <span className="measure">No. {EXAMPLE.no}</span> },
+                  { label: "Sheet", value: <span className="sheet-no">No. {EXAMPLE.no}</span> },
                   { label: "State", value: <StateMark status="open" /> },
                   { label: "Category", value: EXAMPLE.category },
                   { label: "Posted by", value: EXAMPLE.company },
