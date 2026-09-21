@@ -41,7 +41,7 @@ export default function NavBar() {
   const links: { href: string; label: string }[] = [{ href: "/jobs", label: "Open jobs" }];
   if (!loading && isLoggedIn) {
     if (profile?.role === "company") links.push({ href: "/jobs/new", label: "Post a job" });
-    links.push({ href: "/dashboard", label: profile?.role === "company" ? "Your jobs" : "Your bids" });
+    links.push({ href: "/dashboard", label: profile?.role === "company" ? "Your jobs" : "Your quotes" });
   }
 
   const linkClass = (href: string) =>
